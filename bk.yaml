@@ -1,0 +1,31 @@
+name: Banjo Kazooie
+sha1: 24f81f8058d1be416d95ccfcb5ebd2503eb4fd47
+segments:
+  - start: 0xc7a70
+    size: 0x40
+    name: fun_820c5a70
+    format: c
+  - start: 0x1ce450
+    size: 0x14
+    name: fun_821cc450
+    format: c
+  - start: 0x431b58
+    size: 0x1c4
+    name: main
+    format: asm
+  - start: 0x44aebc
+    size: 0x08
+    name: dat_gravity
+    format: c
+  - start: 0x44b6c0
+    size: 0x14
+    name: dat_jump
+    format: c
+  - start: 0x463A18
+    size: 0x9b
+    name: jinjos
+    format: c
+  - start: 0x492000
+    size: 0x28182
+    name: assets
+    format: bin

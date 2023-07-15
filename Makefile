@@ -1,0 +1,39 @@
+C_FILES := $(wildcard src/*.c)
+OBJ_FILES := $(C_FILES:.c=.obj)
+OBJ_FILES := $(addprefix build/,$(notdir $(OBJ_FILES)))
+OBJ_BIN_FILES := $(OBJ_FILES:.obj=.obj.bin)
+
+all: compile patch merge sha1
+	@printf "done\n"
+
+split:
+	@printf "split\n"
+	@split360 split bk.yaml
+
+compile_init:
+	@printf "compile\n"
+	@mkdir -p build
+
+build/%.obj: src/%.c
+	@wine tools/vs2010.bat $< $@
+
+compile: compile_init $(OBJ_FILES)
+
+%.obj.bin: %.obj
+	@coff-linker -a addresses.txt $<
+
+patch_print:
+	@printf "patch\n"
+
+patch: patch_print $(OBJ_BIN_FILES)
+
+merge:
+	@printf "merge\n"
+	@split360 merge bk.yaml merged.xex
+
+sha1:
+	@split360 checksum bk.yaml merged.xex
+
+clean:
+	@printf "cleaned\n"
+	@rm -rf asm bin build
