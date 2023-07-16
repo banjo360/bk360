@@ -24,7 +24,7 @@ typedef struct Vtx_s {
 } Vtx;
 
 typedef struct ActorAnimationInfo_s {
-	float a;
+	u32 a;
 	float b;
 } ActorAnimationInfo;
 

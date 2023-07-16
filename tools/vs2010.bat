@@ -1,7 +1,7 @@
 @echo off
 
 set PROGRAMFILES=Z:\run\media\minirop\5E883B3B883B114F\Program Files (x86)
-set XEDK=Z:\run\media\minirop\5E883B3B883B114F\Program Files (x86)\Microsoft Xbox 360 SDK
+set XEDK=%PROGRAMFILES%\Microsoft Xbox 360 SDK
 set SPEECHSDK=%PROGRAMFILES%\Microsoft SDKs\Speech\v11.0\Tools
 set PATH=%XEDK%\bin\win32;%SPEECHSDK%;%PATH%;
 set INCLUDE=%XEDK%\include\win32;%XEDK%\include\xbox;%XEDK%\include\xbox\sys

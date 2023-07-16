@@ -22,10 +22,6 @@ segments:
     name: dat_jump
     format: c
   - start: 0x463A18
-    size: 0x9b
+    size: 0x104
     name: jinjos
     format: c
-  - start: 0x492000
-    size: 0x28182
-    name: assets
-    format: bin

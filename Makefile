@@ -1,7 +1,6 @@
 C_FILES := $(wildcard src/*.c)
 OBJ_FILES := $(C_FILES:.c=.obj)
 OBJ_FILES := $(addprefix build/,$(notdir $(OBJ_FILES)))
-OBJ_BIN_FILES := $(OBJ_FILES:.obj=.obj.bin)
 
 all: compile patch merge sha1
 	@printf "done\n"
@@ -19,13 +18,9 @@ build/%.obj: src/%.c
 
 compile: compile_init $(OBJ_FILES)
 
-%.obj.bin: %.obj
-	@coff-linker -a addresses.txt $<
-
-patch_print:
+patch:
 	@printf "patch\n"
-
-patch: patch_print $(OBJ_BIN_FILES)
+	@$(foreach file,$(wildcard build/*.obj),coff-linker -a addresses.txt -o build $(file);)
 
 merge:
 	@printf "merge\n"
@@ -37,3 +32,5 @@ sha1:
 clean:
 	@printf "cleaned\n"
 	@rm -rf asm bin build
+
+total: clean split all
