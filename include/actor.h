@@ -3,13 +3,55 @@
 
 #include "defines.h"
 
-typedef struct Actor_s {
-	int x;
-} Actor;
+typedef struct AnimCtrl_s AnimCtrl;
+
+typedef struct ActorAnimationInfo_s {
+    u32 a;
+    float b;
+} ActorAnimationInfo;
 
 typedef struct ActorMarker_s {
-	int x;
+    int x;
 } ActorMarker;
+
+typedef struct Actor_s {
+    ActorMarker* marker;
+    TUPLE(f32,position);
+    u32 state:6; /* unk10_31*/
+    u32 unk10_25:7;
+    u32 unk10_18:6;
+    u32 unk10_12:4;
+    u32 unk10_8:1;
+    u32 unk10_7:1;
+    u32 unk10_6:2;
+    u32 unk10_4:1;
+    u32 unk10_3:2;
+    u32 unk10_1:1;
+    u32 unk10_0:1;
+    AnimCtrl *animctrl;
+    ActorAnimationInfo *unk18;
+    TUPLE(f32, unk1C);
+    f32 unk28; //used in cheggs
+    TUPLE(f32, velocity);
+    u32  unk38_31:10;
+    u32  unk38_21:9;
+    u32  unk38_13:9;
+    u32  stored_animctrl_playbackType_:3; //animctrlPlaybackType
+    u32  unk38_0:1;
+    u32 unk3C;
+    s32 unk40;
+    u32 unk44_31:8;
+    u32 modelCacheIndex:10; //modelCacheIndex
+    s32 unk44_14:10;
+    u32 despawn_flag:1;
+    u32 unk44_2:1;
+    u32 unk44_1:1;
+    u32 unk44_0:1;
+    f32 unk48; //used in chlmonkey (chimpy)
+    f32 unk4C;
+    /* 0x50 */ f32 yaw; //0x50
+    f32 unk54; //0x54
+} Actor;
 
 typedef struct Gfx_s {
 	int x;
@@ -22,11 +64,6 @@ typedef struct Mtx_s {
 typedef struct Vtx_s {
 	int x;
 } Vtx;
-
-typedef struct ActorAnimationInfo_s {
-	u32 a;
-	float b;
-} ActorAnimationInfo;
 
 typedef struct actor_info_s{
     s16     markerId;

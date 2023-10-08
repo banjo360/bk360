@@ -5,6 +5,10 @@ segments:
     size: 0x40
     name: fun_820c5a70
     format: c
+  - start: 0x1863e8
+    size: 0x9C
+    name: __chJinjo_clamp_rotation
+    format: c
   - start: 0x1ce450
     size: 0x14
     name: fun_821cc450

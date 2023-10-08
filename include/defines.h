@@ -9,4 +9,6 @@ typedef uint16_t u16;
 typedef int16_t  s16;
 typedef float    f32;
 
+#include "structs.h"
+
 #endif
