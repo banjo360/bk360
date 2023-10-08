@@ -8,6 +8,6 @@ set INCLUDE=%XEDK%\include\win32;%XEDK%\include\xbox;%XEDK%\include\xbox\sys
 set LIB=%XEDK%\lib\win32;%XEDK%\lib\xbox
 set _NT_SYMBOL_PATH=SRV*%XEDK%\bin\xbox\symsrv;%_NT_SYMBOL_PATH%
 
-cl.exe /c /FA /Fabuild/ /O2 /Iinclude /Fo%2 %1 1>NUL 2>&1
+cl.exe /c /FAc /Fabuild/ /O1 /Iinclude /Fo%2 %1
 
 :end

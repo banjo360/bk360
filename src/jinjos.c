@@ -23,15 +23,20 @@ ActorInfo chJinjoYellow = { MARKER_5E_JINJO_YELLOW, ACTOR_5E_JINJO_YELLOW, ASSET
 ActorInfo chJinjoPink   = { MARKER_5D_JINJO_PINK,   ACTOR_61_JINJO_PINK,   ASSET_3C1_MODEL_JINJO_PINK,   0x1, chJinjoAnimations, chJinjo_update, fun_8212A060, actor_draw, 0, 0, 0.0f, 0};
 ActorInfo chJinjoOrange = { MARKER_5C_JINJO_ORANGE, ACTOR_5F_JINJO_ORANGE, ASSET_3BC_MODEL_JINJO_ORANGE, 0x1, chJinjoAnimations, chJinjo_update, fun_8212A060, actor_draw, 0, 0, 0.0f, 0};
 
+const f32 DAT_8200183c = 230.f;
+const f32 DAT_82001580 = 360.f;
+
 void __chJinjo_clamp_rotation(Actor *this, s16 arg1)
 {
-    f32 tmpf = this->yaw;
-    tmpf -= time_getDelta()*arg1/45.0;
-    
-    if(tmpf >= 360.0f)
-        tmpf -= 360.0f;
-    else if (tmpf < 0.0f)
-        tmpf += 360.0f;
+    f32 tmpf = time_getDelta();
 
-    this->yaw = tmpf;
+    tmpf = tmpf * DAT_8200183c + this->unk54;
+    this->unk54 = tmpf;
+
+    if (DAT_82001580 <= tmpf)
+    {
+        this->unk54 = tmpf - DAT_82001580;
+    }
+
+    this->pitch = this->unk54;
 }

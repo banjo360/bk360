@@ -51,6 +51,18 @@ typedef struct Actor_s {
     f32 unk4C;
     /* 0x50 */ f32 yaw; //0x50
     f32 unk54; //0x54
+    u32 unk58_31: 15;
+    u32 stored_animctrl_index: 14; //animctrlAnimIndex;
+    u32 unk58_2: 1;
+    u32 unk58_1: 1;
+    u32 unk58_0: 1;
+    f32 unk5C;
+    f32 unk60; //0x60
+    f32 yaw_ideal; //0x64
+    f32 pitch;//0x68
+    f32 unk6C;
+    f32 unk70;
+    f32 unk74;
 } Actor;
 
 typedef struct Gfx_s {
