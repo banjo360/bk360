@@ -2,3 +2,4 @@ asm/
 build/
 bin/
 *.xex
+*.pdb

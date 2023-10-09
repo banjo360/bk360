@@ -5,6 +5,10 @@ segments:
     size: 0x40
     name: fun_820c5a70
     format: c
+  - start: 0x1859a8
+    size: 0x60
+    name: __chJinjo_increase_pitch
+    format: c
   - start: 0x1863e8
     size: 0x9C
     name: __chJinjo_clamp_rotation
@@ -21,9 +25,9 @@ segments:
     size: 0x08
     name: dat_gravity
     format: c
-  - start: 0x44b6c0
-    size: 0x14
-    name: dat_jump
+  - start: 0x44b6c8
+    size: 0x2C
+    name: dat_unknown
     format: c
   - start: 0x463A18
     size: 0x104

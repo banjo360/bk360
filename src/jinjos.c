@@ -25,8 +25,10 @@ ActorInfo chJinjoOrange = { MARKER_5C_JINJO_ORANGE, ACTOR_5F_JINJO_ORANGE, ASSET
 
 const f32 DAT_8200183c = 230.f;
 const f32 DAT_82001580 = 360.f;
+const f64 DAT_8200c050 = 0.02222222222222222;
+const f32 DAT_820007a0 = 0.0f;
 
-void __chJinjo_clamp_rotation(Actor *this, s16 arg1)
+void __chJinjo_increase_pitch(Actor *this, s16 arg1)
 {
     f32 tmpf;
     tmpf = time_getDelta();
@@ -40,4 +42,21 @@ void __chJinjo_clamp_rotation(Actor *this, s16 arg1)
     }
 
     this->pitch = this->unk54;
+}
+
+void __chJinjo_clamp_rotation(Actor *this, s16 arg1)
+{
+    f32 tmpd = this->unk54;
+    f32 tmpf = time_getDelta() * arg1 * DAT_8200c050 - tmpd;
+
+    if (tmpf >= DAT_82001580)
+    {
+        tmpf = tmpf - DAT_82001580;
+    }
+    else if (tmpf < DAT_820007a0)
+    {
+        tmpf = tmpf + DAT_82001580;
+    }
+
+    this->unk54 = tmpf;
 }
