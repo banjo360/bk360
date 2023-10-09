@@ -28,7 +28,8 @@ const f32 DAT_82001580 = 360.f;
 
 void __chJinjo_clamp_rotation(Actor *this, s16 arg1)
 {
-    f32 tmpf = time_getDelta();
+    f32 tmpf;
+    tmpf = time_getDelta();
 
     tmpf = tmpf * DAT_8200183c + this->unk54;
     this->unk54 = tmpf;
