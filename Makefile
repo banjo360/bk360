@@ -28,6 +28,8 @@ merge:
 
 sha1:
 	@split360 checksum bk.yaml merged.xex
+	$(eval DIFF := $(shell cmp -l default.xex merged.xex | wc -l))
+	$(info Difference: $(DIFF) bytes)
 
 clean:
 	@printf "cleaned\n"

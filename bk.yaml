@@ -23,13 +23,26 @@ segments:
     format: asm
   - start: 0x44aebc
     size: 0x08
-    name: dat_gravity
+    name: gravity
     format: c
+    segment: rdata
   - start: 0x44b6c8
-    size: 0x2C
-    name: dat_unknown
+    size: 0x14
+    name: jump
     format: c
+    segment: rdata
+  - start: 0x44B6DC
+    size: 0x20
+    name: ant
+    format: c
+    segment: rdata
   - start: 0x463A18
     size: 0x104
     name: jinjos
     format: c
+    segment: data
+  - start: 0x463B1C
+    size: 0x14
+    name: jinjos
+    format: c
+    segment: rdata
