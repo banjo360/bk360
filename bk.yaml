@@ -36,8 +36,8 @@ segments:
     name: ant
     format: c
     segment: rdata
-  - start: 0x462A04
-    size: 0x18
+  - start: 0x4629EC
+    size: 0x30
     name: mm_huts
     format: c
     segment: rdata
