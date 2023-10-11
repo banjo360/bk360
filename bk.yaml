@@ -1,6 +1,11 @@
 name: Banjo Kazooie
 sha1: 24f81f8058d1be416d95ccfcb5ebd2503eb4fd47
 segments:
+  - start: 0x99d8
+    size: 0x6CE
+    name: strings_0x820079d8
+    format: c
+    segment: rdata
   - start: 0xc7a70
     size: 0x40
     name: fun_820c5a70
