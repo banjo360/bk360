@@ -36,13 +36,13 @@ segments:
     name: ant
     format: c
     segment: rdata
+  - start: 0x462A04
+    size: 0x18
+    name: mm_huts
+    format: c
+    segment: rdata
   - start: 0x463A18
     size: 0x104
     name: jinjos
     format: c
     segment: data
-  - start: 0x463B1C
-    size: 0x14
-    name: jinjos
-    format: c
-    segment: rdata
