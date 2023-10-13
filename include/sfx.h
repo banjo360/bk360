@@ -589,7 +589,7 @@ enum sfx_e
     SFX_3F2_UNKNOWN, //gold_chest_ttc
 
     SFX_3F5_UNKNOWN = 0x3F5, //RBB/code_5F80
-    SFX_3F6_UNKNOWN, //lair/code_0 func_803880BC
+    SFX_3F6_UNKNOWN, //lair/code_0
     SFX_3F7_UNKNOWN, //gv/histup
     SFX_3F8_UNKNOWN, //gv/histup
     SFX_3F9_UNKNOWN, //chmole
@@ -613,7 +613,7 @@ enum sfx_e
     SFX_414_XMAS_GIFT_TALKING,
     SFX_415_UNKNOWN, //xmas tree
     SFX_416,
-    SFX_417_UNKNOWN, //lair/func_8038EB94, double health
+    SFX_417_UNKNOWN, //double health
 
     SFX_419_UNKNOWN = 0x419,
     SFX_41A_UNKNOWN = 0x41a

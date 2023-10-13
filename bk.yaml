@@ -56,3 +56,8 @@ segments:
     name: jinjos
     format: c
     segment: data
+  - start: 0x466910
+    size: 0x864
+    name: lair
+    format: c
+    segment: data
