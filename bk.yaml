@@ -1,26 +1,31 @@
 name: Banjo Kazooie
 sha1: 24f81f8058d1be416d95ccfcb5ebd2503eb4fd47
 segments:
+  - start: 0x6e08
+    size: 0xcef
+    name: strings_0x82004e08
+    format: c
+    segment: rdata
   - start: 0x99d8
-    size: 0x6CE
+    size: 0x6ce
     name: strings_0x820079d8
     format: c
     segment: rdata
   - start: 0xc7a70
     size: 0x40
-    name: fun_820c5a70
+    name: func_820c5a70
     format: c
   - start: 0x1859a8
     size: 0x60
     name: __chJinjo_increase_pitch
     format: c
   - start: 0x1863e8
-    size: 0x9C
+    size: 0x9c
     name: __chJinjo_clamp_rotation
     format: c
   - start: 0x1ce450
     size: 0x14
-    name: fun_821cc450
+    name: func_821cc450
     format: c
   - start: 0x431b58
     size: 0x1c4

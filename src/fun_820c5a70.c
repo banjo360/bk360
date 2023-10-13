@@ -18,15 +18,15 @@ enum comusic_e
     COMUSIC_1_FINAL_BATTLE
 };
 
-void fun_820c5110();
-CoMusic* fun_820c5060(enum comusic_e track_id);
+void func_820c5110();
+CoMusic* func_820c5060(enum comusic_e track_id);
 
-void fun_820c5a70(enum comusic_e track_id)
+void func_820c5a70(enum comusic_e track_id)
 {
     CoMusic* iVar1;
 
-    iVar1 = fun_820c5060(track_id);
+    iVar1 = func_820c5060(track_id);
     if ((iVar1 != 0) && (iVar1->unk15 = 1, iVar1->unk8 == 0)) {
-        fun_820c5110();
+        func_820c5110();
     }
 }

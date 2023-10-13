@@ -10,6 +10,8 @@ typedef int16_t  s16;
 typedef float    f32;
 typedef double   f64;
 
+#define NULL 0
+
 #include "structs.h"
 
 #endif
