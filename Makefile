@@ -14,7 +14,7 @@ compile_init:
 	@mkdir -p build
 
 build/%.obj: src/%.c
-	@wine tools/vs2010.bat $< $@
+	@WINEDEBUG=-all wine tools/vs2010.bat $< $@
 
 compile: compile_init $(OBJ_FILES)
 
@@ -33,6 +33,6 @@ sha1:
 
 clean:
 	@printf "cleaned\n"
-	@rm -rf asm bin build
+	@rm -rf asm bin build matching
 
 total: clean split all
