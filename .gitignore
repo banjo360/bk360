@@ -1,5 +1,6 @@
 asm/
 build/
 bin/
+matching/
 *.xex
 *.pdb
