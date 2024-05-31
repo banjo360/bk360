@@ -1,0 +1,1 @@
+XML file containing all found functions and some *named* variables from the N64 decomp.
