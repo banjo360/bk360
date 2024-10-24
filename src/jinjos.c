@@ -46,8 +46,8 @@ void __chJinjo_increase_pitch(Actor *this, s16 arg1)
 
 void __chJinjo_clamp_rotation(Actor *this, s16 arg1)
 {
-    f32 tmpd = this->unk54;
-    f32 tmpf = time_getDelta() * arg1 * D_8200c050 - tmpd;
+    f32 tmpf = this->unk54;
+    tmpf -= arg1 * time_getDelta() * D_8200c050;
 
     if (tmpf >= D_82001580)
     {

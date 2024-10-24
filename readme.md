@@ -21,7 +21,7 @@ Look at the `Makefile` to see what you can do. But basically, you do `make split
 
 ## Current state
 
-Still looking how to get matching bytes. At the time of writing, the 11 bytes differences come from `__chJinjo_clamp_rotation` where 1 instruction is *out-of-order* compared to the target binary:
+Still looking how to get matching bytes. At the time of writing, the 10 bytes differences come from `__chJinjo_clamp_rotation` where 1 instruction is *out-of-order* compared to the target binary:
 
 ```as
 // default.xex
@@ -30,7 +30,7 @@ mr  r30, r4
 lfs f31, 0x54(r31)
 
 // compiled code
-lfs fr31,54h(r3)
-mr  r31,r3
-mr  r30,r4
+lfs f31, 0x54(r3)
+mr  r31, r3
+mr  r30, r4
 ```
