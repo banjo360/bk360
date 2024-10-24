@@ -46,10 +46,6 @@ void func_821a8018(Actor *);
 void func_8212A060(Actor *);
 void func_821a8030(Actor *);
 void func_821a8040(Actor *);
-void lair_func_821a4e78(Actor *);
-void lair_func_821a7448(Actor *);
-void lair_func_821a76a8(Actor *);
-void lair_func_821a8038(Actor *);
 //void (Actor *);
 
 #endif

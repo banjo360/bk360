@@ -11,10 +11,6 @@ segments:
     name: strings_0x820079d8
     format: c
     segment: rdata
-  - start: 0xc7a70
-    size: 0x40
-    name: func_820c5a70
-    format: c
   - start: 0x1859a8
     size: 0x60
     name: __chJinjo_increase_pitch
@@ -25,7 +21,7 @@ segments:
     format: c
   - start: 0x1ce450
     size: 0x14
-    name: func_821cc450
+    name: FUN_821cc450
     format: c
   - start: 0x431b58
     size: 0x1c4
@@ -54,10 +50,5 @@ segments:
   - start: 0x463A18
     size: 0x104
     name: jinjos
-    format: c
-    segment: data
-  - start: 0x466910
-    size: 0x864
-    name: lair
     format: c
     segment: data
