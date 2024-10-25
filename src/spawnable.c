@@ -2,6 +2,8 @@
 #include "map.h"
 
 void spawnableActorList_add(ActorInfo *arg0, Actor *(*arg1)(s32[3], s32, ActorInfo *, u32), u32 arg2);
+s32 level_get();
+s32 FUN_8219f2e8(s32);
 
 void spawnableActorList_addIfMapVisited(ActorInfo *arg0, Actor *(*arg1)(s32[3], s32, ActorInfo *, u32), u32 arg2, enum map_e arg3){
     if( level_get() != LEVEL_6_LAIR

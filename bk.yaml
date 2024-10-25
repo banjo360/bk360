@@ -15,6 +15,10 @@ segments:
     size: 0x5C
     name: spawnableActorList_addIfMapVisited
     format: c
+  - start: 0x10d530
+    size: 0x1c
+    name: item_set
+    format: c
   - start: 0x1859a8
     size: 0x60
     name: __chJinjo_increase_pitch
