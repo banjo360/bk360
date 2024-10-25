@@ -5512,6 +5512,7 @@
 82183EE8 Function_82183EE8
 82183F40 Function_82183F40
 821840B8 chJigsawDance_setState
+821841C0 FUN_821841c0
 821841F0 Function_821841F0
 821843E8 __chJinjo_clamp_rotation
 821843E8 __chJinjo_clamp_rotation
@@ -11597,6 +11598,12 @@
 8241ACAC __restgprlr_21
 8241ACB0 __restgprlr_22
 8241ACB4 __restgprlr_23
+8241ACB8 __restgprlr_24
+8241ACBC __restgprlr_25
+8241ACC0 __restgprlr_26
+8241ACC4 __restgprlr_27
+8241ACC8 __restgprlr_28
+8241ACCC __restgprlr_29
 8241ACBC FUN_8241acbc
 8241ACC0 FUN_8241acc0
 8241ACC4 FUN_8241acc4

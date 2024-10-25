@@ -11,9 +11,17 @@ segments:
     name: strings_0x820079d8
     format: c
     segment: rdata
+  - start: 0xe0be0
+    size: 0x5C
+    name: spawnableActorList_addIfMapVisited
+    format: c
   - start: 0x1859a8
     size: 0x60
     name: __chJinjo_increase_pitch
+    format: c
+  - start: 0x1861c0
+    size: 0x2C
+    name: FUN_821841c0
     format: c
   - start: 0x1863e8
     size: 0x9c
