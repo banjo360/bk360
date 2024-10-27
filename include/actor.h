@@ -93,6 +93,12 @@ typedef struct actor_info_s{
     //u8     pad22[2];
 } ActorInfo;
 
+typedef struct actor_spawn_s{
+    ActorInfo   *infoPtr;
+    Actor *(*spawnFunc)(s32[3], s32, ActorInfo*, u32);
+    s32         unk8;
+} ActorSpawn;
+
 enum actor_e
 {
     ACTOR_1_UNKNOWN         = 0x1,

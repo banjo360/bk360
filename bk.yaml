@@ -12,9 +12,9 @@ segments:
     format: c
     segment: rdata
   - start: 0xe0be0
-    size: 0x5C
-    name: spawnableActorList_addIfMapVisited
-    format: c
+    size: 0x5c
+    name: spawnable
+    format: obj
   - start: 0x10d530
     size: 0x1c
     name: item_set
