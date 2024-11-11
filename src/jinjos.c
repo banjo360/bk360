@@ -43,7 +43,7 @@ void __chJinjo_increase_pitch(Actor *this, s16 arg1)
 
     this->pitch = this->unk54;
 }
-
+/*
 void __chJinjo_clamp_rotation(Actor *this, s16 arg1)
 {
     f32 tmpf = this->unk54;
@@ -60,3 +60,4 @@ void __chJinjo_clamp_rotation(Actor *this, s16 arg1)
 
     this->unk54 = tmpf;
 }
+*/

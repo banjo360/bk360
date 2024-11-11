@@ -14,26 +14,22 @@ segments:
   - start: 0xe0be0
     size: 0x5c
     name: spawnable
-    format: obj
+    format: c
   - start: 0x10d530
     size: 0x1c
-    name: item_set
+    name: items
     format: c
   - start: 0x1859a8
     size: 0x60
-    name: __chJinjo_increase_pitch
+    name: jinjos
     format: c
   - start: 0x1861c0
     size: 0x2C
-    name: FUN_821841c0
-    format: c
-  - start: 0x1863e8
-    size: 0x9c
-    name: __chJinjo_clamp_rotation
+    name: unk
     format: c
   - start: 0x1ce450
     size: 0x14
-    name: FUN_821cc450
+    name: fun_821cc450
     format: c
   - start: 0x431b58
     size: 0x1c4
