@@ -18,31 +18,31 @@ enum comusic_e
     COMUSIC_1_FINAL_BATTLE
 };
 
-void n64_func_802599B4();
+void n64_func_802599B4(CoMusic*);
 CoMusic* FUN_820c5060(enum comusic_e track_id);
 extern CoMusic *n64_D_80276E30;
 
 void N64_func_8025AABC(enum comusic_e track_id)
 {
-    CoMusic* iVar1;
+    CoMusic* iVar1 = FUN_820c5060(track_id);
+    if (iVar1 != 0)
+    {
+        iVar1->unk15 = 1;
 
-    iVar1 = FUN_820c5060(track_id);
-    if ((iVar1 != 0) && (iVar1->unk15 = 1, iVar1->unk8 == 0)) {
-        n64_func_802599B4();
+        if (iVar1->unk8 == 0)
+        {
+            n64_func_802599B4(iVar1);
+        }
     }
 }
-
-void n64_func_802599B4(CoMusic*);
 
 void n64_func_8025AB00(void)
 {
     CoMusic* iVar1 = n64_D_80276E30;
 
     iVar1->unk15 = 1;
-    if (iVar1->unk8)
+    if (!iVar1->unk8)
     {
-        return;
+        n64_func_802599B4(iVar1);
     }
-
-    n64_func_802599B4(iVar1);
 }
