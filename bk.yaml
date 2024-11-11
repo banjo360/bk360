@@ -1,5 +1,6 @@
 name: Banjo Kazooie
 sha1: 24f81f8058d1be416d95ccfcb5ebd2503eb4fd47
+vram_offset: 0x81ffe000
 segments:
   - start: 0x6e08
     size: 0xcef
@@ -11,6 +12,10 @@ segments:
     name: strings_0x820079d8
     format: c
     segment: rdata
+  - start: 0xc7a70
+    size: 0x64
+    name: comusic
+    format: c
   - start: 0xe0be0
     size: 0x5c
     name: spawnable
