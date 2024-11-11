@@ -12,8 +12,8 @@ segments:
     name: strings_0x820079d8
     format: c
     segment: rdata
-  - start: 0xc7a70
-    size: 0x64
+  - start: 0xc79f8
+    size: 0xdc
     name: comusic
     format: c
   - start: 0xe0be0
