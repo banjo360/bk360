@@ -63,7 +63,16 @@ typedef struct Actor_s {
     f32 unk6C;
     f32 unk70;
     f32 unk74;
+    u32 unk78;
+    u32 unk7C;
+    u32 unk80;
+    s32 index;
 } Actor;
+
+typedef struct Unk_82183a40_s {
+    u8 unk[0x84];
+    u32 unk84;
+} Unk_82183a40_s;
 
 typedef struct Gfx_s {
 	int x;

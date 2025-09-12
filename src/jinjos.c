@@ -1,5 +1,4 @@
 #include "asset.h"
-#include "actor.h"
 #include "functions.h"
 #include "jinjos.h"
 #include "marker.h"
@@ -28,7 +27,7 @@ const f32 D_82001580 = 360.f;
 const f64 D_8200c050 = 0.02222222222222222;
 const f32 D_820007a0 = 0.0f;
 
-void __chJinjo_increase_pitch(Actor *this, s16 arg1)
+void __chJinjo_increase_pitch(Actor *this)
 {
     f32 tmpf;
     tmpf = time_getDelta();
@@ -43,6 +42,29 @@ void __chJinjo_increase_pitch(Actor *this, s16 arg1)
 
     this->pitch = this->unk54;
 }
+
+void Function_82183A08(Actor *this)
+{
+    n64_func_80343DEC(this);
+    __chJinjo_increase_pitch(this);
+}
+
+s32 FUN_82183a40(Unk_82183a40_s *param_1)
+{
+    return param_1->unk84;
+}
+
+void FUN_82183a48(Actor *param_1)
+{
+    param_1->unk80 = 1;
+    actor_collisionOff(param_1);
+}
+
+void chjiggy_setJiggyId(Actor *actor, s32 id)
+{
+    actor->index = id;
+}
+
 /*
 void __chJinjo_clamp_rotation(Actor *this, s16 arg1)
 {

@@ -12,8 +12,8 @@ segments:
     name: strings_0x820079d8
     format: c
     segment: rdata
-  - start: 0xc79f8
-    size: 0xdc
+  - start: 0xc7968
+    size: 0x16c
     name: comusic
     format: c
   - start: 0xe0be0
@@ -25,7 +25,7 @@ segments:
     name: items
     format: c
   - start: 0x1859a8
-    size: 0x60
+    size: 0xB8
     name: jinjos
     format: c
   - start: 0x1861c0

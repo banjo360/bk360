@@ -1,12 +1,5 @@
-#include "actor.h"
 #include "map.h"
-
-void spawnableActorList_add(ActorInfo *arg0, Actor *(*arg1)(s32[3], s32, ActorInfo *, u32), u32 arg2);
-s32 level_get();
-s32 FUN_8219f2e8(s32);
-void* malloc(s32, char*);
-void* realloc(void*, s32);
-void free(void*, char*, s32);
+#include "functions.h"
 
 extern s32 sSpawnableActorSize;
 extern ActorSpawn *sSpawnableActorList;

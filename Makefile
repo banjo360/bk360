@@ -14,7 +14,7 @@ compile_init:
 	@mkdir -p build
 
 build/%.obj: src/%.c
-	@WINEDEBUG=-all wine tools/vs2010.bat $< $@
+	@WINEDEBUG=-all wine tools/vs2005.bat $< $@
 
 compile: compile_init $(OBJ_FILES)
 

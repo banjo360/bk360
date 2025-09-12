@@ -1,64 +1,60 @@
 #include "defines.h"
+#include "functions.h"
 
-typedef struct struct_11_s
-{
-    f32 unk0;
-    f32 unk4;
-    s32 unk8;
-    s32 unkC;
-    s16 track_id; //trackId
-    s16 unk12;
-    u8 unk14;
-    u8 unk15;
-    u8 pad16[0x2];
-    FREE_LIST(struct12s) *unk18;
-    s32 unk1C[0xE];
-} CoMusic;
-
-enum comusic_e
-{
-    COMUSIC_0_DING_A = 0x00,
-    COMUSIC_1_FINAL_BATTLE
-};
-
-void n64_func_802599B4(CoMusic*);
-CoMusic* FUN_820c5060(enum comusic_e track_id);
 extern CoMusic *n64_D_80276E30;
 
-void n64_func_8025AA48()
+void n64_func_8025A96C()
 {
-    CoMusic *iPtr2;
+    CoMusic *iPtr;
 
-    for (iPtr2 = n64_D_80276E30; iPtr2 < n64_D_80276E30 + 6; iPtr2++)
+    if (n64_D_80276E30 == NULL)
     {
-        if (iPtr2->track_id >= 0 && !iPtr2->unk14)
+        assertion_failed("W", ".\\comusic.c", 0x344);
+    }
+
+    for (iPtr = n64_D_80276E30; iPtr < n64_D_80276E30 + 6; iPtr++)
+    {
+        if (iPtr->track_id >= 0)
         {
-            n64_func_802599B4(iPtr2);
+            n64_func_802599B4(iPtr);
+        }
+    }
+}
+
+void n64_func_8025A9D4()
+{
+    CoMusic *iPtr;
+
+    for (iPtr = n64_D_80276E30; iPtr < n64_D_80276E30 + 6; iPtr++)
+    {
+        if (iPtr->track_id >= 0 && iPtr->unk14 == 0)
+        {
+            n64_func_802599B4(iPtr);
         }
     }
 }
 
 void N64_func_8025AABC(enum comusic_e track_id)
 {
-    CoMusic* iVar1 = FUN_820c5060(track_id);
-    if (iVar1 != NULL)
+    CoMusic* iPtr = FUN_820c5060(track_id);
+    if (iPtr != NULL)
     {
-        iVar1->unk15 = 1;
+        iPtr->unk15 = 1;
 
-        if (iVar1->unk8 == 0)
+        if (iPtr->unk8 == 0)
         {
-            n64_func_802599B4(iVar1);
+            n64_func_802599B4(iPtr);
         }
     }
 }
 
 void n64_func_8025AB00()
 {
-    CoMusic* iVar1 = n64_D_80276E30;
+    CoMusic* iPtr = n64_D_80276E30;
 
-    iVar1->unk15 = 1;
-    if (!iVar1->unk8)
+    iPtr->unk15 = 1;
+    if (!iPtr->unk8)
     {
-        n64_func_802599B4(iVar1);
+        n64_func_802599B4(iPtr);
     }
 }

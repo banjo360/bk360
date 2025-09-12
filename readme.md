@@ -7,11 +7,13 @@ Some code, like enumerations or structure definitions, are taken from the N64 pr
 ## Requirements
 
 * [split360](https://github.com/banjo360/split360) and [coff-linker](https://github.com/banjo360/coff-linker) in the PATH.
-* Visual Studio 2010 installed.
-* XBOX 360 SDK installed.
-* Editing `tools/vs2010.bat` to change `PROGRAMFILES` to the correct path.
+* Visual Studio 2005 SP1 installed.
+* XBOX 360 SDK installed (I'm using 7645).
+* Editing `tools/vs2005.bat` to change `XEDK` to the correct path.
 * WINE installed if building on linux.
 * Editing `Makefile` to remove the call to WINE if building on Windows (untested).
+
+Optional: you can add [dump-diff](https://github.com/banjo360/dump-diff) to your PATH if you want to print the non-matching differences.
 
 ## Usage
 
@@ -21,16 +23,4 @@ Look at the `Makefile` to see what you can do. But basically, you do `make split
 
 ## Current state
 
-Still looking how to get matching bytes. At the time of writing, the 10 bytes differences come from `__chJinjo_clamp_rotation` where 1 instruction is *out-of-order* compared to the target binary:
-
-```as
-// default.xex
-mr  r31, r3
-mr  r30, r4
-lfs f31, 0x54(r31)
-
-// compiled code
-lfs f31, 0x54(r3)
-mr  r31, r3
-mr  r30, r4
-```
+Copying functions from the Ghidra pseudo-code or from the N64 decompilation project and see if they match.
