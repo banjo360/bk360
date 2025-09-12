@@ -60,11 +60,6 @@ void FUN_82183a48(Actor *param_1)
     actor_collisionOff(param_1);
 }
 
-void chjiggy_setJiggyId(Actor *actor, s32 id)
-{
-    actor->index = id;
-}
-
 /*
 void __chJinjo_clamp_rotation(Actor *this, s16 arg1)
 {

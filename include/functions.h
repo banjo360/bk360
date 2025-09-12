@@ -3,6 +3,7 @@
 
 #include "actor.h"
 #include "audio.h"
+#include "items.h"
 
 f32 time_getDelta();
 Actor *actor_drawFullDepth(ActorMarker *marker, Gfx **gfx, Mtx **mtx, Vtx **vtx);
@@ -58,6 +59,24 @@ void free(void*, char*, s32);
 void n64_func_802599B4(CoMusic*);
 CoMusic* FUN_820c5060(enum comusic_e track_id);
 void n64_func_8025A96C();
+s32 mapSpecificFlags_get(s32 i);
+s32 item_getCount(enum item_e item);
+void player_setModelVisible(bool visible);
+void gcStaticCamera_activate(s32 arg0);
+void timedFunc_set_0(f32 time, GenFunction_0 funcPtr);
+void timedFunc_set_1(f32 time, GenFunction_1 funcPtr, s32 arg0);
+void timedFunc_set_2(f32 time, GenFunction_2 funcPtr, s32 arg0, s32 arg1);
+void timedFunc_set_3(f32 time, GenFunction_3 funcPtr, s32 arg0, s32 arg1, s32 arg2);
+void timedFunc_set_4(f32 time, GenFunction_4 funcPtr, s32 arg0, s32 arg1, s32 arg2, s32 arg3);
+void timedFunc_set_5(f32 time, GenFunction_5 funcPtr, s32 arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4);
+void timedFunc_set_6(f32 time, GenFunction_6 funcPtr, void* argPtr );
+void timedJiggySpawn(f32 time, s32 jiggyId, f32 *position);
+void spawnJiggyDestroyedEffects(u32 x, u32 y, u32 z, u32 resetSwitchFlag);
+void resetFlag(enum bgs_specific_flags flag);
+void mapSpecificFlags_set(s32, s32);
+void progressDialog_setAndTriggerDialog_0(enum volatile_flags_e id);
+void playJiggyDestroyedSoundsAndReset(ActorMarker *marker, u32 resetSwitchFlag);
+void func_802BE720(void);
 
 //void (Actor *);
 

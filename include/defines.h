@@ -18,9 +18,20 @@ typedef float    f32;
 typedef double   f64;
 
 #define NULL 0
+#define FALSE 0
+#define TRUE 1
+#define bool u8
 
 #include "structs.h"
 
 void assertion_failed(const char*, const char*, s32);
+
+typedef void (* GenFunction_0)(void);
+typedef void (* GenFunction_1)(s32);
+typedef void (* GenFunction_2)(s32, s32);
+typedef void (* GenFunction_3)(s32, s32, s32);
+typedef void (* GenFunction_4)(s32, s32, s32, s32);
+typedef void (* GenFunction_5)(s32, s32, s32, s32, s32);
+typedef void (* GenFunction_6)(void *);
 
 #endif

@@ -25,8 +25,12 @@ segments:
     name: items
     format: c
   - start: 0x1859a8
-    size: 0xB8
+    size: 0xAC
     name: jinjos
+    format: c
+  - start: 0x185a58
+    size: 0x138
+    name: jiggy
     format: c
   - start: 0x1861c0
     size: 0x2C
