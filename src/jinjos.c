@@ -1,7 +1,5 @@
-#include "asset.h"
 #include "functions.h"
 #include "jinjos.h"
-#include "marker.h"
 
 ActorAnimationInfo chJinjoAnimations[] = {
     {0, 0.0f},
@@ -27,7 +25,7 @@ const f32 D_82001580 = 360.f;
 const f64 D_8200c050 = 0.02222222222222222;
 const f32 D_820007a0 = 0.0f;
 
-void __chJinjo_increase_pitch(Actor *this)
+void chjiggy_updateRotation(Actor *this)
 {
     f32 tmpf;
     tmpf = time_getDelta();
@@ -46,7 +44,7 @@ void __chJinjo_increase_pitch(Actor *this)
 void Function_82183A08(Actor *this)
 {
     n64_func_80343DEC(this);
-    __chJinjo_increase_pitch(this);
+    chjiggy_updateRotation(this);
 }
 
 s32 FUN_82183a40(Unk_82183a40_s *param_1)
@@ -56,7 +54,7 @@ s32 FUN_82183a40(Unk_82183a40_s *param_1)
 
 void FUN_82183a48(Actor *param_1)
 {
-    param_1->unk80 = 1;
+    param_1->isHidden = 1;
     actor_collisionOff(param_1);
 }
 

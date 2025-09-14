@@ -1,4 +1,4 @@
-#include "map.h"
+#include "enums.h"
 #include "functions.h"
 
 extern s32 sSpawnableActorSize;

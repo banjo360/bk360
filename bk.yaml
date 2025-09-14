@@ -29,7 +29,7 @@ segments:
     name: jinjos
     format: c
   - start: 0x185a58
-    size: 0x138
+    size: 0x48C
     name: jiggy
     format: c
   - start: 0x1861c0

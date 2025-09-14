@@ -16,10 +16,4 @@ typedef struct struct_11_s
     s32 unk1C[0xE];
 } CoMusic;
 
-enum comusic_e
-{
-    COMUSIC_0_DING_A = 0x00,
-    COMUSIC_1_FINAL_BATTLE
-};
-
 #endif

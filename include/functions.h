@@ -3,7 +3,7 @@
 
 #include "actor.h"
 #include "audio.h"
-#include "items.h"
+#include "enums.h"
 
 f32 time_getDelta();
 Actor *actor_drawFullDepth(ActorMarker *marker, Gfx **gfx, Mtx **mtx, Vtx **vtx);
@@ -77,7 +77,23 @@ void mapSpecificFlags_set(s32, s32);
 void progressDialog_setAndTriggerDialog_0(enum volatile_flags_e id);
 void playJiggyDestroyedSoundsAndReset(ActorMarker *marker, u32 resetSwitchFlag);
 void func_802BE720(void);
-
-//void (Actor *);
+Actor *marker_getActor(ActorMarker *);
+enum jiggy_e chjiggy_getJiggyId(Actor *this);
+void func_8033A280(f32);
+void func_8033A244(f32);
+f32 randf (void);
+f32 randf2(f32 min, f32 max);
+s32 randi2(s32 min, s32 max);
+void commonParticle_add(ActorMarker *marker, s32 arg1, void* arg2);
+int commonParticle_new(enum common_particle_e particle_id, int arg1);
+enum jiggy_e getJiggyId(Actor *this);
+s32 jiggyscore_isCollected(enum jiggy_e);
+void func_80329904(ActorMarker *, s32, f32 *);
+void marker_despawn(ActorMarker *marker);
+void subaddie_set_state(Actor *, u32);
+void chjiggy_updateRotation(Actor *this);
+s32 levelSpecificFlags_get(s32 i);
+void actor_collisionOn(Actor *);
+s32 func_80341F2C(s32 arg0);
 
 #endif

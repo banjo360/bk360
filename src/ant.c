@@ -1,4 +1,4 @@
-#include "sfx.h"
+#include "enums.h"
 #include "defines.h"
 
 const float D_824516dc = 30.0f;
