@@ -49,7 +49,6 @@ Actor *chjiggy_draw(ActorMarker *this, Gfx **gdl, Mtx **mptr, Vtx **vtx) {
 void chjiggy_update(Actor *this) {
     JiggyLocal* local = &this->jiggy;
 
-    // A small chance to show a jiggy shine effect. Up to four can be shown at once.
     if (this->marker->unk14_21) {
         s32 i;
         for (i = 0; i < 4; i++) {
@@ -60,7 +59,7 @@ void chjiggy_update(Actor *this) {
         }
     }
 
-    if ((this->unk170 & 0x10) == 0)
+    if (this->unk170_4 == FALSE)
     {
         switch (this->jiggy.index)
         {
@@ -79,10 +78,10 @@ void chjiggy_update(Actor *this) {
             break;
         }
 
-        this->unk170 |= 0x10;
+        this->unk170_4 = TRUE;
     }
 
-    switch (this->unk10 >> 0x1a) {
+    switch (this->state) {
         case JIGGY_STATE_1_INIT:
             local->isHidden = FALSE;
 
@@ -104,7 +103,7 @@ void chjiggy_update(Actor *this) {
                         this->unk44_14 = func_80341F2C(0x20A);
                         this->unk48 = 0.0f;
                         this->unk4C = 300.0f;
-                        this->marker->unk2C = this->marker->unk2C | 4;
+                        this->marker->unk2C_2 = 1;
                         this->unk54 = 0.0f;
                         n64_func_80343DEC(this);
                         chjiggy_updateRotation(this);
