@@ -20,6 +20,10 @@ segments:
     size: 0x5c
     name: spawnable
     format: c
+  - start: 0x100CD0
+    size: 0x170
+    name: asset_cache
+    format: c
   - start: 0x10d530
     size: 0x1c
     name: items

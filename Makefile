@@ -8,6 +8,10 @@ all: compile patch merge sha1
 split:
 	@printf "split\n"
 	@split360 split bk.yaml
+	@python tools/matcher.py
+
+objdiff:
+	@python tools/objdiff.py
 
 compile_init:
 	@printf "compile\n"

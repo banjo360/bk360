@@ -54,7 +54,7 @@ s32 FUN_82183a40(Unk_82183a40_s *param_1)
 
 void FUN_82183a48(Actor *param_1)
 {
-    param_1->isHidden = 1;
+    param_1->jiggy.isHidden = 1;
     actor_collisionOff(param_1);
 }
 
