@@ -104,7 +104,7 @@ void chjiggy_update(Actor *this) {
                         this->unk48 = 0.0f;
                         this->unk4C = 300.0f;
                         this->marker->unk2C_2 = 1;
-                        this->unk54 = 0.0f;
+                        this->yaw = 0.0f;
                         n64_func_80343DEC(this);
                         chjiggy_updateRotation(this);
                         break;

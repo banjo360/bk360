@@ -1,6 +1,8 @@
 #ifndef STRUCTS_H
 #define STRUCTS_H
 
+#include "defines.h"
+
 typedef struct{
     f32 x;
     f32 y;

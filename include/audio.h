@@ -1,6 +1,8 @@
 #ifndef AUDIO_H
 #define AUDIO_H
 
+#include "structs.h"
+
 typedef struct struct_11_s
 {
     f32 unk0;

@@ -1,7 +1,7 @@
 #ifndef ACTOR_H
 #define ACTOR_H
 
-#include "defines.h"
+#include "structs.h"
 
 typedef struct AnimCtrl_s AnimCtrl;
 
@@ -81,8 +81,8 @@ typedef struct Actor_s {
     u32 unk44_0:1;
     f32 unk48;
     f32 unk4C;
-    f32 yaw;
     f32 unk54;
+    f32 yaw;
     u32 unk58_31: 15;
     u32 stored_animctrl_index: 14;
     u32 unk58_2: 1;
